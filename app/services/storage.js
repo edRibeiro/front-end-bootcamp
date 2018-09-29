@@ -1,11 +1,9 @@
 const storageService = localStorage ? {
   initialize: () => {
-    const items = [];
-
-    return JSON.parse(localStorage.items) || items;
+    return localStorage.items || (localStorage.items = "[]");
   },
   favoriteItem: id => {
-    if(!isFavorited(id)) {
+    if(!storageService.isFavorited(id)) {
       const items = JSON.parse(localStorage.items);
 
       items.push(id);
@@ -15,7 +13,7 @@ const storageService = localStorage ? {
     return false;
   },
   unFavoriteItem: id => {
-    if(isFavorited(id)) {
+    if(storageService.isFavorited(id)) {
       const items = JSON.parse(localStorage.items);
 
       const result = items.filter(item => item !== id);

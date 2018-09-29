@@ -6,11 +6,6 @@ import { getItem, search } from "./services/api";
 import storageService from "./services/storage";
 
 export default class App extends Component {
-
-  componentDidMount(){
-    storageService
-  }
-
   render() {
     return (
       <div className="App">
