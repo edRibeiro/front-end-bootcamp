@@ -11,7 +11,8 @@ export default class App extends Component {
     return (
       <div className="App">
         <Headline>Hello human!</Headline>
-        <Button>Add to favorites</Button>
+        <Button type="Like">Add to favorites</Button>
+        <Button type="Back"></Button>
       </div>
     )
   }

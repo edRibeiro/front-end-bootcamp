@@ -3,10 +3,10 @@ import "./styles.less"
 
 export default class Button extends Component{
   render(){
-    const { children } = this.props;
+    const { children, type } = this.props;
 
     return (
-      <button className="Button">
+      <button className={`Button Button--${type}`}>
         { children }
       </button>
     )
