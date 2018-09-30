@@ -10,3 +10,7 @@ ReactDOM.render(<App />, root);
 module.hot
   ? module.hot.accept()
   : null
+
+
+// storiesOf("Button", module)
+//   .add("default", () => <Button>Add to favorites</Botton>);
